@@ -5,6 +5,14 @@ using Xamarin.Forms;
 
 namespace Demo
 {
+    public class PhotoUrl2 : PhotoUrl
+    {
+        public PhotoUrl2()
+        {
+            System.Diagnostics.Debug.WriteLine("!!!!!!   PhotoUrl2 constructor called.");
+        }
+    }
+
 	public partial class MyTabbedPage : TabbedPage
 	{
 		public MyTabbedPage()
@@ -13,7 +21,7 @@ namespace Demo
 
 			myCarousel.ItemsSource = new List<DataTemplate>()
 			{
-				new DataTemplate(() => { return new PhotoUrl(); }),
+				new DataTemplate(() => { return new PhotoUrl2(); }),
 				new DataTemplate(() => { return new Bio(); }),
 				new DataTemplate(() => { return new ContactInfo(); })
 			};
